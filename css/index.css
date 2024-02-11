@@ -1,0 +1,160 @@
+body {
+    height: 100vh;
+    
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+/* - - - - Main - - - - */
+main {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+#mainContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+
+    outline: solid var(--c-primary) 1px;
+    outline-offset: -10px;
+    overflow: hidden;
+
+    width: 350px;
+    height: 419px;
+    padding-bottom: 66px;
+
+    cursor: default;
+}
+
+#mainContainer:hover img {
+    transform: scale(1.07);
+}
+
+#mainContainer img {
+    height: 20vh;
+    transition: all 0.12s ease-out;
+}
+
+.heading-container {
+    height: 52px;
+}
+
+h1 {
+    background-image: linear-gradient(to bottom, var(--c-text), var(--c-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    font-size: 2.8em;
+
+    margin: 0;
+    margin-top: 20px;
+}
+
+.shimmer-heading {
+    font-size: 2.8em;
+    color: transparent;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmerAnimation 8s infinite linear;
+
+    position: relative;
+    transform: translateY(-74px);
+}
+
+@keyframes shimmerAnimation {
+    0% {
+        background-position: -700px;
+    }
+
+    100% {
+        background-position: 700px;
+    }
+}
+
+
+#description {
+    margin: 30px 0;
+    color: var(--c-accent);
+}
+
+#description p {
+    margin: 5px;
+}
+
+
+/* - - - - - Button - - - - -*/
+.primaryButton {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 128px;
+    height: 42px;
+    padding: 0;
+
+    cursor: pointer;
+    overflow: hidden;
+
+    background-color: var(--c-accent);
+
+    border-radius: 50px;
+    border: none;
+    transition: box-shadow 0.11s ease-out;
+}
+
+.primaryButton:hover {
+    box-shadow: 0 0 8px 0 var(--c-accent);
+}
+
+.primaryButton div {
+    position: absolute;
+    top: 0;
+    right: 26px;
+    width: 124px;
+    height: 36px;
+    display: flex;
+
+    transition: all 0.1s ease-out;
+}
+
+.primaryButton:hover div {
+    right: 5px;
+    width: 116px;
+}
+
+.primaryButton img {
+    margin-top: 8px;
+    height: 16px;
+}
+
+.primaryButton p {
+    color: white;
+    width: 100px;
+    height: 30px;
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 17px;
+
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 1.3em;
+
+    transition: all 0.1s ease-out;
+}
+
+.primaryButton:hover p {
+    margin-left: 0px;
+}
